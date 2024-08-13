@@ -2,13 +2,12 @@
 
 rm(list = ls())
 
-writewd = "C:/Users/u0112360/Documents/____/Sagalassos/__PhD/Articles/__MI-Article/results"
-readwd = "C:/Users/u0112360/Documents/____/Sagalassos/__PhD/Articles/__MI-Article/results/ICRATES_slices"
+readwd = writewd = "~/data/"
 
 # read slices
-slice_Hellenistic = read.csv(paste0(readwd, "/slice_aggr_HELLENISTIC.csv"))
+slice_Hellenistic = read.csv(paste0(readwd, "slice_aggr_HELLENISTIC.csv"))
 colnames(slice_Hellenistic)[1] = "SiteCode"
-slice_Roman = read.csv(paste0(readwd, "/slice_aggr_ROMAN.csv"))
+slice_Roman = read.csv(paste0(readwd, "slice_aggr_ROMAN.csv"))
 colnames(slice_Roman)[1] = "SiteCode"
 
 # transform to Presence/Absence
@@ -49,7 +48,7 @@ cooc_all = merge(cooc_Hellenistic, cooc_Roman, by = c("Var1", "Var2"))
 cooc_all$CO_diff = cooc_all$CO_Hellenistic - cooc_all$CO_Roman
 
 # # save dataset
-# write.csv(cooc_all, paste0(writewd, "/df_CO_melted.csv"), row.names = F)
+# write.csv(cooc_all, paste0(writewd, "df_CO_melted.csv"), row.names = F)
 
 
 

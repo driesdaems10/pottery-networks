@@ -2,17 +2,17 @@
 
 rm(list = ls())
 
-readwd = writewd = "C:/Users/u0112360/Documents/____/Sagalassos/__PhD/Articles/__MI-Article/results"
+readwd = writewd = "~/data/"
 
 library(reshape2)
 library(GGally)
 
 # read cost matrix
-costM = as.matrix(read.csv(paste0(readwd, "/cost_matrix.csv"), row.names = 1))
+costM = as.matrix(read.csv(paste0(readwd, "cost_matrix.csv"), row.names = 1))
 
 # read MIM matrix
-MIM_Hellensitic = as.matrix(read.csv(paste0(readwd, "/MIM_Sites_HELLENISTIC.csv"), row.names = 1))
-MIM_Roman = as.matrix(read.csv(paste0(readwd, "/MIM_Sites_ROMAN.csv"), row.names = 1))
+MIM_Hellensitic = as.matrix(read.csv(paste0(readwd, "MIM_Sites_HELLENISTIC.csv"), row.names = 1))
+MIM_Roman = as.matrix(read.csv(paste0(readwd, "MIM_Sites_ROMAN.csv"), row.names = 1))
 
 # exclude self-loops
 diag(MIM_Hellensitic) = NA
@@ -43,8 +43,4 @@ df_all = merge(df_all, MIM_Roman_melt, by = c("Var1", "Var2"))
 head(df_all)
 
 # # save the dataset
-# write.csv(df_all, paste0(writewd, "/df_MI&Cost_melted.csv"), row.names = F)
-
-
-
-
+# write.csv(df_all, paste0(writewd, "df_MI&Cost_melted.csv"), row.names = F)

@@ -2,12 +2,12 @@
 
 rm(list = ls())
 
-readwd = writewd = "C:/Users/u0112360/Documents/____/Sagalassos/__PhD/Articles/__MI-Article/results/"
+readwd = writewd = "~/data/"
 
 # read filtering data
-df_filter_sites = read.csv(paste0(writewd, "/JAS_sites_filtered.csv"))
+df_filter_sites = read.csv(paste0(writewd, "JAS_sites_filtered.csv"))
 head(df_filter_sites)
-df_filter_wares = read.csv("C:/Users/u0112360/Documents/____/Sagalassos/__PhD/Conferences/ConnectedPast_2023/workdir/Rresults/ware_names.csv")
+df_filter_wares = read.csv(paste0(readwd, "ware_names.csv"))
 head(df_filter_wares)
 # filter sites
 subset_sites = sort(as.character(df_filter_sites$id))

@@ -4,7 +4,7 @@ rm(list = ls())
 
 library(corrplot)
 
-readwd = writewd = "C:/Users/u0112360/Documents/____/Sagalassos/__PhD/Articles/__MI-Article/results/"
+readwd = writewd = "~/data/"
 
 # network of cost values
 costM = read.csv(paste0(readwd, "cost_matrix.csv"), row.names = 1)

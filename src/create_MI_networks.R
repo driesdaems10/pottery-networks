@@ -1,8 +1,7 @@
 # Create mutual information matrices (MIM) per (1) time slice and (2) site
 rm(list = ls())
 
-readwd = "C:/Users/u0112360/Documents/____/Sagalassos/__PhD/Articles/__MI-Article/results/ICRATES_slices"
-writewd = "C:/Users/u0112360/Documents/____/Sagalassos/__PhD/Articles/__MI-Article/results"
+readwd = writewd = "~/data/"
 
 library(infotheo)
 library(tidyr)
@@ -22,9 +21,9 @@ slice_names = list.files(readwd)
 
 
 # read filtering data
-df_filter_sites = read.csv(paste0(writewd, "/JAS_sites_filtered.csv"))
+df_filter_sites = read.csv(paste0(writewd, "JAS_sites_filtered.csv"))
 head(df_filter_sites)
-df_filter_wares = read.csv("C:/Users/u0112360/Documents/____/Sagalassos/__PhD/Conferences/ConnectedPast_2023/workdir/Rresults/ware_names.csv")
+df_filter_wares = read.csv(paste0(readwd, "ware_names.csv"))
 head(df_filter_wares)
 # filter sites
 subset_sites = as.character(df_filter_sites$id)
