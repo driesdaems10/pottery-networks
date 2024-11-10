@@ -1,5 +1,7 @@
 # ancient_routes_paper
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14063966.svg)](https://doi.org/10.5281/zenodo.14063966)
+
 The repository contains material supportive to publication:
 
 Daems, D. and Kafetzaki, D. (Accepted). Unravelling the Threads of Connectivity: A Mutual Information Approach to Tracing Material Networks in the Late Hellenistic and Early Roman Mediterranean. _Journal of Archaeological Science._
