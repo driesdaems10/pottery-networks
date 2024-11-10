@@ -1,0 +1,6 @@
+here (1.0.1)
+corrplot (0.92)
+infotheo (1.2.0.1)
+reshape2 (1.4.4)
+ggplot2 (3.4.4)
+GGally (2.2.0)
