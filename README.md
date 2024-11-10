@@ -6,13 +6,13 @@ Daems, D. and Kafetzaki, D. (Accepted). Unravelling the Threads of Connectivity:
 
 ## Original data sources
 
-The original data sources are [ICRATES](https://archaeologydataservice.ac.uk/archives/view/icrates_lt_2018/) and [Orbis](https://orbis.stanford.edu/). The ICRATES data provide the basis to create the mutual information (MI) data. The Orbis data provide the basis to create the least cost path (CO) data. These are combined using the workflow visualised in the [workflow schema](#workflow_schema).
+The original data sources are [ICRATES](https://archaeologydataservice.ac.uk/archives/view/icrates_lt_2018/) and [Orbis](https://orbis.stanford.edu/). The ICRATES data provide the basis to create the mutual information (MI) data. The Orbis data provide the basis to create the least cost path (CO) data. These are combined using the workflow visualised in the [workflow schema](#workflow).
 
 
 ## Repository structure
 
 ### ./data/
-The folder contains data files created based on the two public data sources and on the workflow presented schematically in [workflow schema](#workflow_schema). 
+The folder contains data files created based on the two public data sources and on the workflow presented schematically in [workflow schema](#workflow). 
 
 Download the ICRATES data from https://archaeologydataservice.ac.uk/archives/view/icrates_lt_2018/downloads.cfm in the `./data/ICRATES/` folder. 
 
@@ -36,24 +36,23 @@ The folder contains all figures and tables of the publication.
 
 The following table lists the R scripts in the sequence they are run. A short description and the Figures resulting from each script are also included in teh table.
 
-| script                        | purpose                                                             | plot                   |
-| ----------------------------- | ------------------------------------------------------------------- | ---------------------- |
-| 1. *create_cost_network.R*    | Transform least cost value paths to matrix format                   | Figure 3               |
-| 2. *create_time-slices.R*     | Create ICRATES time slices per fabric and location                  | -                      |
-| 3. *select_wares.R*           | Filter and merge wares of interest: ESA, ESB, ESC, ESD, ITS         | -                      |
-| 4. *create_MI_networks.R*     | Create mutual information matrices (MIM) per time slice and site    | Tables 1, 2            |
-| 5. *compute_coocurrence.R*    | Calculate co-occurrence of wares for each pair of sites             | -                      |
-| 6. *transform_MI&Cost_data.R* | Transform MI and Cost to dataset                                    | -                      |
-| 7. *compare_matrices.R*       | Compare matrices of cost and mutual information                     | Figures 4, 5           |
-| 8. *analyse_pairs-of-sites.R* | Visualize data based on cost, mutual information and co-accourrence | Figures 6, 7, 8, 9, 10 |
+| script                     | purpose                                                             | plot                   |
+| -------------------------- | ------------------------------------------------------------------- | ---------------------- |
+| *create_cost_network.R*    | Transform least cost value paths to matrix format                   | Figure 3               |
+| *create_time-slices.R*     | Create ICRATES time slices per fabric and location                  | -                      |
+| *select_wares.R*           | Filter and merge wares of interest: ESA, ESB, ESC, ESD, ITS         | -                      |
+| *create_MI_networks.R*     | Create mutual information matrices (MIM) per time slice and site    | Tables 1, 2            |
+| *compute_coocurrence.R*    | Calculate co-occurrence of wares for each pair of sites             | -                      |
+| *transform_MI&Cost_data.R* | Transform MI and Cost to dataset                                    | -                      |
+| *compare_matrices.R*       | Compare matrices of cost and mutual information                     | Figures 4, 5           |
+| *analyse_pairs-of-sites.R* | Visualize data based on cost, mutual information and co-accourrence | Figures 6, 7, 8, 9, 10 |
 
 
 ## Workflow
 
+![workflow schema \label{workflow}](./ancient_routes_paper.png)
+
 The workflow is schematically presented at `./ancient_routes_paper.png`. The R script `./ancient_routes_paper.R` combines all R components into the workflow.
-
-![workflow_schema](./ancient_routes_paper.png)
-
 
 ### Requirements
 The file `./requirementsR.txt` includes the R libraries used for the R workflow in R version 4.3.1.
