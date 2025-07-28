@@ -6,7 +6,7 @@ library("infotheo")
 slice_names <- c("slice_HELLENISTIC.csv", "slice_ROMAN.csv")
 
 # read filtering data
-df_filter_sites <- read.csv(here("data", "JAS_sites_filtered.csv"))
+df_filter_sites <- read.csv(here("data", "ANEE__sites_filtered.csv"))
 head(df_filter_sites)
 
 # filter sites

@@ -4,7 +4,7 @@ library("here")
 library("corrplot")
 
 # read filtering data
-df_filter_sites <- read.csv(here("data", "JAS_sites_filtered.csv"))
+df_filter_sites <- read.csv(here("data", "ANEE__sites_filtered.csv"))
 head(df_filter_sites)
 df_filter_wares <- read.csv(here("data", "ware_names.csv"))
 head(df_filter_wares)
@@ -20,7 +20,7 @@ costM <- matrix(
 colnames(costM) <- rownames(costM) <- subset_sites
 
 # read cost value list
-df <- read.csv(here("data", "costMatrix_JAS-LCP.csv"))
+df <- read.csv(here("data", "costMatrix_ANEE-LCP.csv"))
 
 # fill in the matrix
 for (i in 1:dim(df)[1]) {
