@@ -32,5 +32,5 @@ source(here("src", "transform_MI&Cost_data.R"))
 # Compare matrices of cost and mutual information
 source(here("src", "compare_matrices.R"))
 
-# Visualize data based on cost, mutual information and co-accourrence
+# Visualize data based on cost, mutual information and co-occurrence
 source(here("src", "analyse_pairs-of-sites.R"))

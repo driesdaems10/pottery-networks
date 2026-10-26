@@ -7,7 +7,7 @@ library("GGally")
 df_1 <- read.csv(here(
      "data",
      "df_CO_melted.csv"
-)) # co-accourrence
+)) # co-occurence
 df_2 <- read.csv(here(
      "data",
      "df_MI&Cost_melted.csv"
@@ -121,7 +121,7 @@ gg3 <- ggparcoord(
      columns = c(7, 6, 8),
      scale = "globalminmax",
      showPoints = TRUE,
-     alphaLines = 0.4,
+     alphaLines = 0.1,
 ) +
      labs(
           x = "",
@@ -167,14 +167,14 @@ ggsave(
 df_all_norm$selected <- ifelse(df_all_norm$MI_Hellenistic > 0.6, 1, 0)
 
 # order data to help visualization
-df_all_norm <- df_all_norm[order(df_all_norm$selected, decreasing = TRUE), ]
+df_all_norm <- df_all_norm[order(df_all_norm$selected, decreasing = FALSE), ]
 
 gg4 <- ggparcoord(
      data = df_all_norm,
      columns = c(7, 6, 8),
      scale = "globalminmax",
      showPoints = TRUE,
-     alphaLines = 0.6,
+     alphaLines = 0.2,
      groupColumn = "selected"
 ) +
      labs(
@@ -226,14 +226,14 @@ df_all_norm$selected <- ifelse(
 )
 
 # order data to help visualization
-df_all_norm <- df_all_norm[order(df_all_norm$selected, decreasing = TRUE), ]
+df_all_norm <- df_all_norm[order(df_all_norm$selected, decreasing = FALSE), ]
 
 gg5 <- ggparcoord(
      data = df_all_norm,
      columns = c(7, 6, 8),
      scale = "globalminmax",
      showPoints = TRUE,
-     alphaLines = 0.6,
+     alphaLines = 0.2,
      groupColumn = "selected"
 ) +
      labs(
